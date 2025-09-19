@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 import sys # to use command tools, terminal tools, paths tools 
 import clang.cindex # to use libclang index (<=> iterator)
