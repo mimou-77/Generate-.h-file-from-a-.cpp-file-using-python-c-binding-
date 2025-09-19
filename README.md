@@ -14,9 +14,14 @@ This tool uses :
 
 1. The .cpp file is passed as an argument to the Python script.
 2. The file is parsed into a __translation unit__ (a description of the src file)
-3. This translation unit is traversed to find fucntions declarations
+3. This translation unit is traversed to find functions declarations
 4. For each fucntion declaration: extract return type, function name, parameters (parameter name + parameter type) and create the prototype as a string that has the format: __"return_type function_name(parameter_1_type parameter_1_name, parameter_2_type parameter_2_name);\n"__
-5. A .h file is created with the same name as the .cpp file, all the fucntions prototypes are written in the .h file; the .h file also includes a header guard at the beginning and at the end (top of the file: #ifndef __MY_FILE_H_ #define __MY_FILE_H_ ... bottom of the file : #endif) 
+5. A .h file is created with the same name as the .cpp file;
+   
+   The .h file contains :
+   - a header guard at the beginning and at the end (top of the file: #ifndef __MY_FILE_H_ #define __MY_FILE_H_ ... bottom of the file : #endif) 
+   - all the functions prototypes for the functions defined in the .cpp file
+   - the necessary #includes for the types of arguments in the functions prototypes (deducted from the file: .vscode/c_cpp_properties.json and the #includes in the .cpp file)
 
 > [!IMPORTANT]
 > Linux Ubuntu

@@ -1,6 +1,9 @@
 {
     "python.analysis.extraPaths": [
-        "/home/mariem/.espressif/python_env/idf5.4_py3.12_env/lib/python3.12/site-packages"
+        "/home/mariem/.espressif/python_env/idf5.4_py3.12_env/lib/python3.12/site-packages",
+        "/usr/lib/python3/dist-packages/clang",
+        "/usr/lib/python3/dist-packages/**",
+
 
     ],
 }
