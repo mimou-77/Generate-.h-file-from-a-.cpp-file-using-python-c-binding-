@@ -1,7 +1,4 @@
 
-
-
-
 # Header generator (uses python)
 
 This tool generates a .h file from a .cpp file.
@@ -21,7 +18,7 @@ This tool uses :
    The .h file contains :
    - a header guard at the beginning and at the end (top of the file: #ifndef __MY_FILE_H_ #define __MY_FILE_H_ ... bottom of the file : #endif) 
    - all the functions prototypes for the functions defined in the .cpp file
-   - the necessary #includes for the types of arguments in the functions prototypes (deducted from the file: .vscode/c_cpp_properties.json and the #includes in the .cpp file)
+   - the #includes copied from the .cpp file
 
 > [!IMPORTANT]
 > Linux Ubuntu
@@ -32,7 +29,7 @@ This tool uses :
 
 1. Clone this repository
 
-        git clone XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        git clone https://github.com/mimou-77/Generate-.h-file-from-a-.cpp-file-using-python-c-binding-
 
 2. Install python3
 
@@ -58,7 +55,7 @@ This tool uses :
 
 ### II. Test on a file:
 
-Go to where you cloned this repository, it contains the file __f1.cpp__ we can use a test example.
+Go to where you cloned this repository, it contains the file __f1.cpp__ we can use as a test example.
 
     cd ~/header_generator_python ;
 
@@ -71,7 +68,7 @@ We will generate the __f1.h__ file from the __f1.cpp__ file:
 >[!Note]
 > We can create a symbolic link to use this tool from any place:
 >
->       ln -s xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+>       sudo ln -s ~/header_generator_cpp_python/generate_header_tool.py /usr/local/bin/generate_header_tool
 >
 > Now from any place (example: ~/) you can use the tool:
 >
